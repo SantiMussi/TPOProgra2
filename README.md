@@ -31,3 +31,9 @@ Es un conjunto que tiene subconjuntos, se utilizarán las operaciones del conjun
 Además contará con un método que permita calcular el complemento de un conjunto ingresado por parámetro.
 >[!WARNING]
 > Es precondición que no se pueda calcular un complemento de un conjunto que no es subconjunto del superconjunto 
+
+## Cola dinámica cíclica doblemente enlazada
+
+Cola que guarda el valor del anterior y el siguiente, el primero y el último también se encuentran conectados entre sí.
+
+> Es lo mismo que una cola dinámica pero el Nodo en vez de tener únicamente el siguiente, también guarda la referencia del Nodo anterior.
