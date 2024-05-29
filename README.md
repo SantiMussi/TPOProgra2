@@ -13,7 +13,7 @@ los métodos a utilizar en la interfaz serán los mismos que la pila dinámica.
     - Intento de desapilar en una pila vacía.
     - Intento de encontrar el tope en una pila vacía
   
-###Interfaz:
+Interfaz:
 ```
 public interface PilaDinamica {
     void inicializarPila(int max);
