@@ -2,11 +2,11 @@
 
 ## Pila dinámica con capacidad limitada
 
-- Se realiza una pila dinámica normal la cual se le ingresa mediante un método constructor la capacidad máxima,
-los métodos a utilizar en la interfaz serán los mismos que la pila dinámica.
+> Se realiza una pila dinámica normal la cual se le ingresa mediante un método constructor la capacidad máxima, los métodos a utilizar en la interfaz serán los mismos que la pila dinámica.
 
 - Al momento de apilar, se verificará si la pila ya ha alcanzado su índice máximo o si aún tiene espacio.
 - Se trabajará únicamente con enteros positivos.
+[!CAUTION]
 - Errores a manejar:
     - Intento de apilar un entero negativo.
     - Intento de apilar en una pila llena.
@@ -26,5 +26,4 @@ public interface PilaDinamica {
 
 ## Superconjunto
 
-
-
+> Es un conjunto que tiene subconjuntos, se utilizarán las operaciones del conjunto normal y contará además con un método el cual reciba como parámetro 
