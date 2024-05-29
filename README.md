@@ -27,4 +27,7 @@ public interface PilaDinamica {
 
 ## Superconjunto
 
-> Es un conjunto que tiene subconjuntos, se utilizarán las operaciones del conjunto normal y contará además con un método el cual reciba como parámetro 
+> Es un conjunto que tiene subconjuntos, se utilizarán las operaciones del conjunto normal y contará además con un método el cual reciba una instancia del Set y devuelva true si es subconjunto.
+> Además contará con un método que permita calcular el complemento de un conjunto ingresado por parámetro.
+>[!WARNING]
+> Es precondición que no se pueda calcular un complemento de un conjunto que no es subconjunto del superconjunto 
