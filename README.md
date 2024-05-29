@@ -8,10 +8,10 @@
 - Se trabajará únicamente con enteros positivos.
 >[!CAUTION]
 > - Errores a manejar:
-    - Intento de apilar un entero negativo.
-    - Intento de apilar en una pila llena.
-    - Intento de desapilar en una pila vacía.
-    - Intento de encontrar el tope en una pila vacía
+        - Intento de apilar un entero negativo.
+        - Intento de apilar en una pila llena.
+        - Intento de desapilar en una pila vacía.
+        - Intento de encontrar el tope en una pila vacía
   
 Interfaz:
 ```
