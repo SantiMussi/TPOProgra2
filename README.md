@@ -5,7 +5,7 @@
 - Nicolás Szafranko
 - Santiago Mussi
 - Nicolás Sciaraffia
-- Joaquín Galea
+- Joaquín Gallea
 
 ## Índice
 1. [Pila dinámica con capacidad limitada](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#pila-din%C3%A1mica-con-capacidad-limitada)
