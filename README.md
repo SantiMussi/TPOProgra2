@@ -40,9 +40,7 @@ Además contará con un método que permita calcular el complemento de un conjun
 
 ## Cola dinámica cíclica doblemente enlazada
 
-Cola que guarda el valor del anterior y el siguiente, el primero y el último también se encuentran conectados entre sí.
-
-> Es lo mismo que una cola dinámica pero el Nodo en vez de tener únicamente el siguiente, también guarda la referencia del Nodo anterior.
+Cola que guarda el valor del anterior y el siguiente, el primero y el último también se encuentran conectados entre sí. Es lo mismo que una cola dinámica pero el Nodo en vez de tener únicamente el siguiente, también guarda la referencia del Nodo anterior.
 > [!CAUTION]
 > Se agregará a la interfaz un método que devolverá el siguiente al elemento primero (último) y otro que devuelva el anterior.
 
