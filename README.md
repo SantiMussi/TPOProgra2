@@ -1,12 +1,19 @@
 # TPOProgra2
-
-## public class Men{}
-## Integrantes: 
+### public class Men{}
+#### Integrantes: 
 - Matías Masucci
 - Nicolás Szafranko
 - Santiago Mussi
 - Nicolás Sciaraffia
 - Joaquín Galea
+
+## Índice
+1. [Pila dinámica con capacidad limitada](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#pila-din%C3%A1mica-con-capacidad-limitada)
+2. [Superconjunto](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#superconjunto)
+3. [Cola dinámica cíclica doblemente enlazada](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#cola-din%C3%A1mica-c%C3%ADclica-doblemente-enlazada)
+4. [Conjunto con repetidos](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#conjunto-con-repetidos)
+5. [Grafo aleatorio](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#grafo-aleatorio)
+6. [Grafos](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#grafos)
 
 # Modificación a los TDAs
 
