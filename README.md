@@ -24,17 +24,6 @@ Se realiza una pila dinámica normal la cual se le ingresa mediante un método c
 >[!CAUTION]
 > Se trabajará únicamente con enteros positivos.
 
-Interfaz:
-```
-public interface PilaDinamica {
-    void inicializarPila(int max);
-    boolean apilar(int x);
-    boolean desapilar();
-    int tope();
-    boolean pilaVacia();
-}
-```
-
 ## Superconjunto
 
 Es un conjunto que tiene subconjuntos, se utilizarán las operaciones del conjunto normal y contará además con un método el cual reciba una instancia del Set y devuelva true si es subconjunto.
@@ -50,7 +39,12 @@ Cola que guarda el valor del anterior y el siguiente, el primero y el último ta
 
 ## Conjunto con repetidos
 
-Se realizará un conjunto que su tipo de dato será un array de enteros, la posición [0] se referirá al elemento y la siguiente será la cantidad de veces que se ingresó el elemento (el counter).
+Se realizará una implementación dinámica de conjuntos, el nodo tendrá el valor del elemento y la cantidad, además se referirá al nodo siguiente.
+> La cantidad se incrementará cada vez que se agregue el valor
+> Para decrementar la cantidad se utilizará el método sacar(int x), en caso de que la cantidad llegue a 0, se eliminará el Nodo.
+
+>[!WARNING]
+> Debe existir el elemento para que se pueda eliminar.
 
 ## Grafo aleatorio
 
