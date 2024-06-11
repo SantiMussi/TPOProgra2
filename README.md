@@ -55,7 +55,12 @@ Se realizará una implementación dinámica de conjuntos, el nodo tendrá el val
 
 ## Grafo aleatorio
 
-???
+En lugar de utilizar simplemente una lista de adyacencia que contenga enteros, se utilizará una lista de adyacencia que contiene objetos que representan aristas con probabilidades.
+- La clase Grafo contendrá metodos para añadir aristas y recorrer el grafo en preorden y postorden. 
+- La clase Arista representará 
+
+>[!WARNING]
+> El método para agregar una arista deberá aceptar una probabilidad y crear una nueva arista con esa probabilidad
 
 # Grafos
 
