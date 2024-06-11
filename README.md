@@ -64,5 +64,3 @@ En lugar de utilizar simplemente una lista de adyacencia que contenga enteros, s
 > - Parámetros para agregar una arista: destino, probabilidad 
 
 # 2. Grafos
-
-
