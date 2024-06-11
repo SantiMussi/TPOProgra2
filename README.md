@@ -17,7 +17,7 @@
 
 # 1. Modificación a los TDAs
 
-## Pila dinámica con capacidad limitada
+## A. Pila dinámica con capacidad limitada
 
 Se realiza una pila dinámica normal la cual se le ingresa mediante un método constructor la capacidad máxima, los métodos a utilizar en la interfaz serán los mismos que la pila dinámica.
 
@@ -31,20 +31,20 @@ Se realiza una pila dinámica normal la cual se le ingresa mediante un método c
 >[!CAUTION]
 > Se trabajará únicamente con enteros positivos.
 
-## Superconjunto
+## B. Superconjunto
 
 Es un conjunto que tiene subconjuntos, se utilizarán las operaciones del conjunto normal y contará además con un método el cual reciba una instancia del Set y devuelva true si es subconjunto.
 Además contará con un método que permita calcular el complemento de un conjunto ingresado por parámetro.
 >[!WARNING]
 > No se puede calcular un complemento de un conjunto que no es subconjunto del superconjunto.
 
-## Cola dinámica cíclica doblemente enlazada
+## C. Cola dinámica cíclica doblemente enlazada
 
 Cola que guarda el valor del anterior y el siguiente, el primero y el último también se encuentran conectados entre sí. Es lo mismo que una cola dinámica pero el Nodo en vez de tener únicamente el siguiente, también guarda la referencia del Nodo anterior.
 > [!CAUTION]
 > Se agregará a la interfaz un método que devolverá el siguiente al elemento primero (último) y otro que devuelva el anterior.
 
-## Conjunto con repetidos
+## D. Conjunto con repetidos
 
 Se realizará una implementación dinámica de conjuntos, el nodo tendrá el valor del elemento y la cantidad, además se referirá al nodo siguiente.
 > La cantidad se incrementará cada vez que se agregue el valor.
@@ -53,7 +53,7 @@ Se realizará una implementación dinámica de conjuntos, el nodo tendrá el val
 >[!WARNING]
 > Debe existir el elemento para que se pueda eliminar.
 
-## Grafo aleatorio
+## E. Grafo aleatorio
 
 En lugar de utilizar simplemente una lista de adyacencia que contenga enteros, se utilizará una lista de adyacencia que contiene objetos que representan aristas con probabilidades.
 - La clase Grafo contendrá metodos para añadir aristas y recorrer el grafo en preorden y postorden. 
