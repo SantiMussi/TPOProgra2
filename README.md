@@ -15,7 +15,7 @@
 5. [Grafo aleatorio](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#grafo-aleatorio)
 6. [Grafos](https://github.com/SantiMussi/TPOProgra2?tab=readme-ov-file#grafos)
 
-# Modificación a los TDAs
+# 1. Modificación a los TDAs
 
 ## Pila dinámica con capacidad limitada
 
@@ -63,6 +63,6 @@ En lugar de utilizar simplemente una lista de adyacencia que contenga enteros, s
 > El método para agregar una arista deberá aceptar una probabilidad y crear una nueva arista con esa probabilidad.
 > - Parámetros para agregar una arista: destino, probabilidad 
 
-# Grafos
+# 2. Grafos
 
 
