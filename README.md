@@ -64,3 +64,8 @@ En lugar de utilizar simplemente una lista de adyacencia que contenga enteros, s
 > - Parámetros para agregar una arista: destino, probabilidad 
 
 # 2. Grafos
+
+Se realizará un método que espera recibir un objeto tipo grafo dirigido como parámetro.
+- Dentro de ese método se verificará mediante un algoritmo de búsqueda en profundidad (DFS) para ver si el grafo es fuertemente conexo, de ser verdadero, se agregará a un conjunto de grafos dirigidos fuertemente conexo previamente creado.
+> [!CAUTION]
+> En caso de recibir un grafo no dirigido, el concepto de fuertemente conexo no aplica, por lo tanto, no se agregará al conjunto de grafos dirigidos fuertemente conexos.
