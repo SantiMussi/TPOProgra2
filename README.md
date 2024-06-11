@@ -61,7 +61,7 @@ En lugar de utilizar simplemente una lista de adyacencia que contenga enteros, s
 - Con los métodos de preorden y postorden se podrá explorar el grafo a partir de un vértice dado.
 >[!WARNING]
 > El método para agregar una arista deberá aceptar una probabilidad y crear una nueva arista con esa probabilidad.
-> Parámetros para agregar una arista: destino, probabilidad 
+> - Parámetros para agregar una arista: destino, probabilidad 
 
 # Grafos
 
