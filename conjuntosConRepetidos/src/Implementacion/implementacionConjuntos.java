@@ -16,12 +16,11 @@ public class implementacionConjuntos implements interfazConjuntos {
             nuevo.sig = inicio;
             inicio = nuevo;
             return true;
-        } else{
-            nuevo.cantidad++;
         }
-        return false; //No se pudo agregar
+        Nodo actual = pertenece(x);
+        actual.cantidad++; // Incrementar la cantidad del nodo que ya existe
+        return true;
     }
-
     @Override
     public boolean sacar(int x) {
         Nodo actual = pertenece(x);
@@ -31,7 +30,7 @@ public class implementacionConjuntos implements interfazConjuntos {
                 Nodo inicio1 = inicio;
                 Nodo anterior = null;
                 while (inicio1 != null && inicio1.valor != x) {
-                    anterior = actual;
+                    anterior = inicio1;
                     inicio1 = inicio1.sig;
                 }
                 if (inicio1 != null) { //Si se encontró el nodo a ser eliminado
@@ -58,5 +57,13 @@ public class implementacionConjuntos implements interfazConjuntos {
             actual = actual.sig;
         }
         return null;
+    }
+
+    public int cantidad(int x){
+        Nodo actual = pertenece(x);
+        if(actual != null){
+            return actual.cantidad;
+        }
+        return 0;
     }
 }
