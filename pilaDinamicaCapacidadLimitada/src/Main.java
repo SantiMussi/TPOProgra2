@@ -1,71 +1,81 @@
 import Implementacion.pilaDinamica;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Ingrese la capacidad máxima de la pila: ");
-        int max = scan.nextInt();
-        int resp = 0;
+        Random rand = new Random();
+        int max = 5;
         pilaDinamica pila = new pilaDinamica(max);
 
-        while(resp != 6) {
-            System.out.println("\n-----OPCIONES-----"
-            + "\n 1. Inicializar la pila nuevamente con una nueva capacidad máxima."
-            + "\n 2. Apilar un elemento."
-            + "\n 3. Desapilar el último elemento de la pila."
-            + "\n 4. Tope de la pila."
-            + "\n 5. ¿Pila vacía?"
-            + "\n 6. Salir.");
-            System.out.print("Ingrese la opción: ");
-            resp = scan.nextInt();
+        //Añadimos elementos hasta que supere el límite de la pila.
+        for (int i=0; i<6; i++) {
+            int j = rand.nextInt(1, 100);
+            System.out.println("Elemento a apilar: " + j + ".");
+            boolean k = pila.apilar(j);
+            if (!k) {
+                System.out.println("Error, no se pudo apilar el elemento ya que supera la capacidad máxima.");
+            }
+            System.out.println("Tope: " + pila.tope() + ".");
+            if (pila.pilaVacia()) {
+                System.out.println("La pila está vacía.");
+            } else {
+                System.out.println("La pila no está vacía.");
+            }
+        }
 
-            if(resp == 1) {
-                System.out.print("Ingrese la nueva capacidad máxima: ");
-                max = scan.nextInt();
-                pila.inicializarPila(max);
-                System.out.println("Pila inicializada");
+        //Desapilamos un par de elementos para corroborar de que funcina el índice.
+        for (int i=0; i<2; i++){
+            int j = pila.tope();
+            if (j != -1){
+                System.out.println("Elemento a desapilar: " + j + ".");
             }
-            if(resp == 2) {
-                System.out.print("Ingrese el elemento a apilar: ");
-                int elemento = scan.nextInt();
-                while(elemento < 0){
-                    System.out.println("Error, el elemento no puede ser negativo.");
-                    System.out.print("Ingrese el elemento a apilar: ");
-                    elemento = scan.nextInt();
-                }
-                boolean i = pila.apilar(elemento);
-                if (i == false) {
-                    System.out.println("Error, la pila está llena.");
-                } else{
-                    System.out.println("Se apiló el elemento: " + elemento + ".");
-                }
+            pila.desapilar();
+            if(pila.pilaVacia()){
+                System.out.println("La pila está vacía.");
             }
-            if(resp == 3){
-                int elemento = pila.tope();
-                boolean i = pila.desapilar();
-                if(i == false){
-                    System.out.println("Error, no se pudo desapilar el elemento, la pila está vacía.");
-                } else{
-                    System.out.println("Se desapiló el elemento: " + elemento + ".");
-                }
+            else{
+                System.out.println("Tope: " + pila.tope() + ".");
+                System.out.println("La pila no está vacía.");
             }
-            if(resp == 4) {
-                if (pila.tope() == -1) {
-                    System.out.println("Error, la pila está vacía.");
-                } else {
-                    System.out.println("Tope de la pila: " + pila.tope() + ".");
-                }
+        }
+
+        //Apilamos nuevamente para corroborar que funciona el límite de la pila.
+        for (int i=0; i<3; i++){
+            int j = rand.nextInt(1, 100);
+            System.out.println("Elemento a apilar: " + j + ".");
+            boolean k = pila.apilar(j);
+            if (!k){
+                System.out.println("Error, no se pudo apilar el elemento ya que supera la capacidad máxima.");
             }
-            if(resp == 5){
+            if(pila.pilaVacia()) {
+                System.out.println("La pila está vacía.");
+            }
+            else{
+                System.out.println("Tope: " + pila.tope() + ".");
+                System.out.println("La pila no está vacía.");
+            }
+        }
+
+        //Desapilamos hasta vaciar la pila para corroborar que funciona el método pilaVacia
+        for (int i=0; i<6; i++){
+            int j = pila.tope();
+            if (j != -1){
+                System.out.println("Elemento a desapilar: " + j + ".");
+            }
+            boolean k = pila.desapilar();
+            if(k){
                 if(pila.pilaVacia()){
-                    System.out.println("La pila se encuentra vacía.");
-                } else{
+                    System.out.println("La pila está vacía.");
+                }
+                else{
+                    System.out.println("Tope: " + pila.tope() + ".");
                     System.out.println("La pila no está vacía.");
                 }
             }
+            else{
+                System.out.println("Error, no se pudo desapilar ya que la pila ya está vacía.");
+            }
         }
-        scan.close();
     }
 }
