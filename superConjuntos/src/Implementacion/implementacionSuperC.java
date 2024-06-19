@@ -57,19 +57,32 @@ public class implementacionSuperC implements interfazSuperC{
 
     @Override
     public NodoSuperC complemento(implementacionSubC x) {
-        copia = null;
-        NodoSuperC actual=primero;
-        while(actual != null){
-            if(actual.subConjunto != x){
-                agregarCopia(actual.subConjunto);
+        NodoSuperC copia = null; // Inicializar copia localmente
+        NodoSuperC actual = primero;
+        NodoSuperC ultimoCopia = null;
+
+        while (actual != null) {
+            if (!actual.subConjunto.equals(x)) { // Usar equals para comparar objetos
+                NodoSuperC nuevoNodo = new NodoSuperC();
+                nuevoNodo.subConjunto = actual.subConjunto;
+
+                if (copia == null) {
+                    copia = nuevoNodo;
+                    ultimoCopia = copia;
+                } else {
+                    ultimoCopia.sig = nuevoNodo;
+                    ultimoCopia = nuevoNodo;
+                }
             }
             actual = actual.sig;
         }
+
         return copia;
     }
 
-    private boolean agregarCopia(implementacionSubC x) {
-        if(!pertenece(x)){
+
+    private boolean agregarCopia(NodoSuperC copia, implementacionSubC x) {
+        if (!perteneceCopia(copia, x)) {
             NodoSuperC nuevo = new NodoSuperC();
             nuevo.subConjunto = x;
             nuevo.sig = copia;
@@ -79,6 +92,16 @@ public class implementacionSuperC implements interfazSuperC{
         return false; //No se pudo agregar el conjunto
     }
 
+    private boolean perteneceCopia(NodoSuperC copia, implementacionSubC x) {
+        NodoSuperC actual = copia;
+        while (actual != null) {
+            if (actual.subConjunto.equals(x)) {
+                return true;
+            }
+            actual = actual.sig;
+        }
+        return false;
+    }
     public String elementosSuperC(){
         NodoSuperC actual=primero;
         int inx=0;
@@ -93,5 +116,17 @@ public class implementacionSuperC implements interfazSuperC{
             actual=actual.sig;
        }
        return Arrays.deepToString(arr);
+    }
+
+    public String imprimirComplemento(implementacionSubC x) {
+        NodoSuperC complemento = complemento(x);
+        StringBuilder resultado = new StringBuilder();
+        NodoSuperC actual = complemento;
+
+        while (actual != null) {
+            resultado.append(actual.toString()).append(" ");
+            actual = actual.sig;
+        }
+        return resultado.toString();
     }
 }
