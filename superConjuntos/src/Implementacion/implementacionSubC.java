@@ -1,5 +1,6 @@
 package Implementacion;
 import Interfaz.*;
+import java.util.Arrays;
 public class implementacionSubC implements interfazSubC{
     NodoSubC cabeza;
 
@@ -67,5 +68,10 @@ public class implementacionSubC implements interfazSubC{
             actual=actual.sig;
         }
         return arr;
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(elementos());
     }
 }
