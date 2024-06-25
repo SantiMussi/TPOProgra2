@@ -10,9 +10,11 @@ public class Grafo {
     public Grafo(int Vertices) {
         this.Vertices = Vertices;
         adj = new LinkedList<>();
-        for (int i = 0; i < Vertices; ++i) {
-            adj.add(new HashMap<>());
-        }
+        int i = 0;
+        while (i < Vertices) {
+             adj.add(new HashMap<>());
+             i++;
+         }
     }
 
     // Método para añadir una arista al grafo con una probabilidad
