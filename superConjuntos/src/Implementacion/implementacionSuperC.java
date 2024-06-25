@@ -80,28 +80,6 @@ public class implementacionSuperC implements interfazSuperC{
         return copia;
     }
 
-
-    private boolean agregarCopia(NodoSuperC copia, implementacionSubC x) {
-        if (!perteneceCopia(copia, x)) {
-            NodoSuperC nuevo = new NodoSuperC();
-            nuevo.subConjunto = x;
-            nuevo.sig = copia;
-            copia = nuevo;
-            return true; //Se agregó el conjunto
-        }
-        return false; //No se pudo agregar el conjunto
-    }
-
-    private boolean perteneceCopia(NodoSuperC copia, implementacionSubC x) {
-        NodoSuperC actual = copia;
-        while (actual != null) {
-            if (actual.subConjunto.equals(x)) {
-                return true;
-            }
-            actual = actual.sig;
-        }
-        return false;
-    }
     public String elementosSuperC(){
         NodoSuperC actual=primero;
         int inx=0;
