@@ -10,9 +10,11 @@ public class GrafoDirigido {
     // Constructor
     public GrafoDirigido(int v) {
         V = v;
-        adj = new LinkedList[V];
-        for (int i = 0; i < V; ++i) {
+        adj = new List[V];
+        int i = 0;
+        while (i < V) {
             adj[i] = new LinkedList<>();
+            i++;
         }
     }
 
